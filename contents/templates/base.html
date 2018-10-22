@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Discord bots, tools and more">
+    <meta name="keywords" content="Discord, Club, Discord Club, Discord Bots, Magic Bots, Magic, Bots, Embed Generator, Xenon, Discord Backups, Backups">
+    <meta name="author" content="Merlintor">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block title %}
+        <title>Discord Bot Club</title>
+    {% endblock title %}
+
+    <link type="text/css" rel="stylesheet" href="/static/bulma/bulma.css">
+    <link type="text/css" rel="stylesheet" href="/static/custom.css">
+    <link rel="shortcut icon" href="/static/favicon.ico"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+    {% block css %}
+    {% endblock css %}
+</head>
+{% include '/components/navbar.html' %}
+
+{% block content %}
+{% endblock content %}
+
+{% include '/components/footer.html' %}
+
+<script>
+function burgerMenu() {
+    var burger = document.getElementById("navbarBurger");
+    var menu = document.getElementById("navbarMenu");
+    burger.classList.toggle("is-active");
+    menu.classList.toggle("is-active");
+}
+
+</script>
+</body>
+</html>

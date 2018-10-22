@@ -1,0 +1,59 @@
+<section class="hero is-primary is-medium">
+    <div class="hero-head">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <div id="navbarMenuHeroA" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a href="/top" class="navbar-item">
+                            Top
+                        </a>
+                        <a href="/new" class="navbar-item">
+                            New
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                Discord Bot Club
+            </h1>
+            <h2 class="subtitle">
+                No rights reserved
+            </h2>
+        </div>
+    </div>
+
+    <!-- Hero footer: will stick at the bottom -->
+    <div class="hero-foot">
+        <div class="container">
+            <form class="form" method="get" action="/search">
+                <div class="field">
+                    <div class="field-body">
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                <input required name="s" class="input" type="text" placeholder="Keywords"
+                                       value="{{ search }}">
+                            </div>
+                            <div class="control">
+                                <button type="submit" class="button">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+</section>
