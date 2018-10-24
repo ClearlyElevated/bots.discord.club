@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <br><br><br>
+    <h1 class="title">Search Results</h1>
+    <br><br>
+    <div class="columns is-multiline">
+        {% for bot in bots %}
+        <div class="column is-half">
+            {% include '/components/bot.html' %}
+        <br>
+        </div>
+        {% endfor %}
+    </div>
+    <br>
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <a class="pagination-previous" href="?s={{ search }}&page={{ page -1 }}">Previous</a>
+        <a class="pagination-next" href="?s={{ search }}&page={{ page +1 }}">Next page</a>
+        <ul class="pagination-list">
+            <li><a class="pagination-link is-current" aria-label="Page {{ page }}" aria-current="page">{{ page }}</a></li>
+        </ul>
+    </nav>
+    <br><br>
+</div>
+{% endblock content %}

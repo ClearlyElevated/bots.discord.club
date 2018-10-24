@@ -1,33 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-    <br><br><br><br>
-    {% for id, bot in bots.items() %}
-    <div class="card">
-        <div class="card-content">
-            <div class="media">
-                <div class="media-left">
-                    <figure class="image is-48x48">
-                        <img src="{{ bot.avatar_url }}" alt="Bot Avatar">
-                    </figure>
-                </div>
-                <div class="media-content">
-                    <p class="title">{{ bot.name }}</p>
-                    <div class="button is-static">{{ bot.prefix }}</div>
-                    <br><br>
-                    <div class="content">
-                        {{ bot.description }}
-                    </div>
-                </div>
-                <div class="media-right">
-                    {% for name, info in bot.lists.items() %}
-                        <a href="{{ info[0] }}"><span class="icon"><img alt="{{ name }}" src="{{ info[1] }}"></span></a>
-                    {% endfor %}
-                </div>
-            </div>
+    <br><br><br>
+    <h1 class="title">Featured Bots</h1>
+    <br><br>
+    <div class="columns is-multiline">
+        {% for bot in featured_bots %}
+        <div class="column is-half">
+            {% include '/components/bot.html' %}
+        <br>
         </div>
+        {% endfor %}
     </div>
-    <br>
-    {% endfor %}
+    <br><br><br>
+    <a href="/new"><h1 class="title">New Bots</h1></a>
+    <br><br>
+    <div class="columns is-multiline">
+        {% for bot in new_bots %}
+        <div class="column is-half">
+            {% include '/components/bot.html' %}
+        <br>
+        </div>
+        {% endfor %}
+    </div>
+    <br><br>
 </div>
 {% endblock content %}

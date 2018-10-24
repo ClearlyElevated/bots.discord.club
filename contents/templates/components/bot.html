@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-content">
+        <div class="media">
+            <div class="media-left">
+                <figure class="image is-48x48">
+                    <img src="{{ bot.avatar_url }}" alt="Bot Avatar">
+                </figure>
+            </div>
+            <div class="media-content">
+                <h1 class="title">{{ bot.name }}</h1>
+                <h2 class="subtitle">{{ bot.tags|join(", ") }}</h2>
+                <div class="button is-static">{{ bot.prefix }}</div>
+                <br><br>
+                <div class="content">
+                    {{ bot.description }}
+                </div>
+            </div>
+            <div class="media-right">
+                {% for name, info in bot.lists.items() %}
+                <a href="{{ info[0] }}"><span class="icon"><img height="30em" width="30em" alt="{{ name }}"
+                                                                         src="{{ info[1] }}"></span></a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
