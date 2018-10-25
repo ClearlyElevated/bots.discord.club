@@ -62,7 +62,11 @@ async def index(request):
 async def update_bots(app):
     while True:
         print("Updating bots ...")
-        await grabber.update_bots(app["http_session"])
+        try:
+            await grabber.update_bots(app["http_session"])
+        except Exception as e:
+            print(e)
+
         print("Finished updating")
         await asyncio.sleep(15 * 60)
 
